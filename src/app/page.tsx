@@ -21,6 +21,22 @@ export default function Page() {
     },
   ];
 
+  const problemImages = [
+    {
+      src: "https://images.pexels.com/photos/7580243/pexels-photo-7580243.jpeg?cs=srgb&dl=pexels-cottonbro-7580243.jpg&fm=jpg&w=2989&h=4484&_gl=1*g7w1h0*_ga*MTM1MTM5OTk0Ny4xNzc0MDUxMTQ0*_ga_8JE65Q40S6*czE3NzQwNTExNDMkbzEkZzEkdDE3NzQwNTExNTkkajQ0JGwwJGgw",
+      alt: "Clinician documenting notes on a laptop",
+    },
+    {
+      src: "https://images.pexels.com/photos/7088483/pexels-photo-7088483.jpeg?cs=srgb&dl=pexels-mart-production-7088483.jpg&fm=jpg&w=3936&h=2624&_gl=1*1mejzz8*_ga*MTM1MTM5OTk0Ny4xNzc0MDUxMTQ0*_ga_8JE65Q40S6*czE3NzQwNTExNDMkbzEkZzEkdDE3NzQwNTEyMDAkajMkbDAkaDA.",
+      alt: "Healthcare staff reviewing records on a desktop",
+    },
+  ];
+
+  const solutionImage = {
+    src: "https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?cs=srgb&dl=pexels-cottonbro-7579831.jpg&fm=jpg&w=6483&h=4322&_gl=1*1t5jnct*_ga*MTM1MTM5OTk0Ny4xNzc0MDUxMTQ0*_ga_8JE65Q40S6*czE3NzQwNTExNDMkbzEkZzEkdDE3NzQwNTEyOTQkajQ2JGwwJGgw",
+    alt: "Analytics dashboard showing measurable outcomes",
+  };
+
   const benefits = [
     "Reduce reporting time by up to 50%",
     "Improve participant engagement with consistent support",
@@ -132,14 +148,23 @@ export default function Page() {
             </div>
 
             <div className="relative rounded-2xl bg-white p-6 shadow-xl ring-1 ring-slate-100">
-              <div className="aspect-[4/3] rounded-xl bg-slate-100 p-4">
-                <div className="flex h-full w-full items-center justify-center rounded-lg border border-dashed border-slate-300 bg-white text-slate-500">
-                  <span>Product UI / Session Dashboard Preview</span>
-                </div>
-              </div>
+              <h3 className="text-lg font-semibold text-slate-900">
+                Outcome snapshot
+              </h3>
+              <ul className="mt-4 grid gap-3 text-slate-600">
+                <li className="rounded-lg bg-slate-50 p-3">
+                  82/100 engagement score with consistent weekly uplift
+                </li>
+                <li className="rounded-lg bg-slate-50 p-3">
+                  Progress tracking aligned to participant goals
+                </li>
+                <li className="rounded-lg bg-slate-50 p-3">
+                  Clinician‑reviewed, audit‑ready reporting
+                </li>
+              </ul>
               <div className="mt-4 flex items-center justify-between text-sm text-slate-500">
-                <span>NDIS‑aligned session analytics</span>
-                <span>Audit‑ready reports</span>
+                <span>NDIS‑aligned outcomes</span>
+                <span>Secure & compliant</span>
               </div>
             </div>
           </div>
@@ -164,6 +189,20 @@ export default function Page() {
             </div>
           ))}
         </div>
+        <div className="mt-8 grid gap-6 md:grid-cols-2">
+          {problemImages.map((img) => (
+            <div
+              key={img.src}
+              className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm"
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="h-64 w-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* SOLUTION */}
@@ -177,20 +216,29 @@ export default function Page() {
             automated reporting—so your clinicians can focus on people, not
             paperwork.
           </p>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
-              <h3 className="text-lg font-semibold">Designed for outcomes</h3>
-              <p className="mt-2 text-slate-600">
-                Consistent engagement and structured data help demonstrate
-                measurable progress over time.
-              </p>
+          <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="grid gap-6">
+              <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
+                <h3 className="text-lg font-semibold">Designed for outcomes</h3>
+                <p className="mt-2 text-slate-600">
+                  Consistent engagement and structured data help demonstrate
+                  measurable progress over time.
+                </p>
+              </div>
+              <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
+                <h3 className="text-lg font-semibold">Built for compliance</h3>
+                <p className="mt-2 text-slate-600">
+                  Reports follow NDIS documentation expectations and are ready for
+                  clinical review.
+                </p>
+              </div>
             </div>
-            <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
-              <h3 className="text-lg font-semibold">Built for compliance</h3>
-              <p className="mt-2 text-slate-600">
-                Reports follow NDIS documentation expectations and are ready for
-                clinical review.
-              </p>
+            <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm">
+              <img
+                src={solutionImage.src}
+                alt={solutionImage.alt}
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -261,9 +309,18 @@ export default function Page() {
               </div>
             </div>
             <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-100">
-              <div className="flex aspect-video items-center justify-center rounded-xl bg-slate-100 text-slate-500">
-                Video Placeholder
-              </div>
+              <h3 className="text-lg font-semibold text-slate-900">Demo highlights</h3>
+              <ul className="mt-4 grid gap-3 text-slate-600">
+                <li className="rounded-lg bg-slate-50 p-3">
+                  Live session prompts tailored to participant goals
+                </li>
+                <li className="rounded-lg bg-slate-50 p-3">
+                  Real‑time notes and structured observations
+                </li>
+                <li className="rounded-lg bg-slate-50 p-3">
+                  Auto‑generated NDIS report ready for review
+                </li>
+              </ul>
             </div>
           </div>
         </div>
