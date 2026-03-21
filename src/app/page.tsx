@@ -87,19 +87,6 @@ export default function Page() {
     },
   ];
 
-  const testimonials = [
-    {
-      name: "Pilot Partner (Therapy Centre)",
-      quote:
-        "Our clinicians reclaimed hours each week while improving consistency across sessions.",
-    },
-    {
-      name: "NDIS Support Coordinator",
-      quote:
-        "Reporting quality improved significantly, and participants were more engaged.",
-    },
-  ];
-
   return (
     <main className="bg-white text-slate-900">
       {/* HERO */}
@@ -346,36 +333,6 @@ export default function Page() {
           <div className="mt-4 text-xs text-slate-500">
             Note: All data shown is illustrative and aligned to NDIS reporting
             standards.
-          </div>
-        </div>
-      </section>
-
-      {/* SOCIAL PROOF */}
-      <section className="bg-slate-50">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <h2 className="text-3xl font-semibold">Trusted by pilot partners</h2>
-          <div className="mt-6 grid gap-6 md:grid-cols-3">
-            <div className="rounded-xl border border-dashed border-slate-300 p-6 text-center text-slate-500">
-              Logo Placeholder
-            </div>
-            <div className="rounded-xl border border-dashed border-slate-300 p-6 text-center text-slate-500">
-              Logo Placeholder
-            </div>
-            <div className="rounded-xl border border-dashed border-slate-300 p-6 text-center text-slate-500">
-              Logo Placeholder
-            </div>
-          </div>
-
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {testimonials.map((t) => (
-              <div
-                key={t.name}
-                className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm"
-              >
-                <p className="text-slate-700">“{t.quote}”</p>
-                <div className="mt-3 text-sm text-slate-500">{t.name}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
