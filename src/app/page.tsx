@@ -325,10 +325,10 @@ export default function Page() {
               </p>
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="#"
+                  href="#contact"
                   className="rounded-xl bg-blue-600 px-6 py-3 text-center text-white shadow hover:bg-blue-700"
                 >
-                  Watch Demo
+                  Contact Us
                 </a>
                 <a
                   href="#cta"
