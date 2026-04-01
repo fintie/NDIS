@@ -44,6 +44,25 @@ export default function Page() {
     "Integrates into existing NDIS workflows",
   ];
 
+  const features = [
+    {
+      title: "Booking management",
+      text: "Centralise participant bookings with availability checks, confirmations, and automated reminders.",
+    },
+    {
+      title: "Rostering management",
+      text: "Balance workloads with skills‑based staff assignments, leave visibility, and compliance safeguards.",
+    },
+    {
+      title: "Scheduling system",
+      text: "Coordinate sessions, travel buffers, and recurring supports in one shared calendar.",
+    },
+    {
+      title: "Budget prediction & management",
+      text: "Track plan utilisation, forecast spend, and flag risks before budgets run tight.",
+    },
+  ];
+
   const steps = [
     {
       title: "Session with a companion",
@@ -264,6 +283,30 @@ export default function Page() {
                   ✓
                 </div>
                 <p className="text-slate-700">{b}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* OPERATIONS */}
+      <section className="bg-slate-50">
+        <div className="mx-auto max-w-6xl px-6 py-16">
+          <h2 className="text-3xl font-semibold">Operations suite</h2>
+          <p className="mt-3 text-slate-600">
+            Run your day‑to‑day delivery with integrated booking, rostering,
+            scheduling, and budget intelligence.
+          </p>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            {features.map((feature) => (
+              <div
+                key={feature.title}
+                className="rounded-2xl border border-slate-100 bg-white p-6 shadow-sm"
+              >
+                <h3 className="text-lg font-semibold text-slate-900">
+                  {feature.title}
+                </h3>
+                <p className="mt-2 text-slate-600">{feature.text}</p>
               </div>
             ))}
           </div>
