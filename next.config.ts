@@ -5,8 +5,6 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   output: "export",
   images: { unoptimized: true },
-  basePath: "/NDIS",
-  assetPrefix: "/NDIS/",
 };
 
 export default nextConfig;
