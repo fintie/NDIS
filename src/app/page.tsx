@@ -415,29 +415,37 @@ export default function Page() {
                 to deliver better outcomes with less admin burden.
               </p>
               <div className="mt-4 text-slate-400">
-                Contact: hello@ndis‑support.ai
+                Contact: sydney@nextgenius.com.au
               </div>
               <div className="mt-2 text-xs text-slate-500">
                 Privacy‑first • NDIS‑compliant workflows • Secure data handling
               </div>
             </div>
-            <form className="rounded-2xl bg-slate-800 p-6">
+            <form
+              className="rounded-2xl bg-slate-800 p-6"
+              action="mailto:sydney@nextgenius.com.au"
+              method="post"
+              encType="text/plain"
+            >
               <h4 className="text-lg font-semibold text-white">Book a demo</h4>
               <div className="mt-4 grid gap-3">
                 <input
+                  name="Name"
                   className="rounded-lg border border-slate-700 bg-slate-900 px-4 py-2 text-white placeholder:text-slate-500"
                   placeholder="Name"
                 />
                 <input
+                  name="Work email"
                   className="rounded-lg border border-slate-700 bg-slate-900 px-4 py-2 text-white placeholder:text-slate-500"
                   placeholder="Work email"
                 />
                 <input
+                  name="Organisation"
                   className="rounded-lg border border-slate-700 bg-slate-900 px-4 py-2 text-white placeholder:text-slate-500"
                   placeholder="Organisation"
                 />
                 <button
-                  type="button"
+                  type="submit"
                   className="rounded-lg bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
                 >
                   Book a Demo
